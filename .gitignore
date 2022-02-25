@@ -1,4 +1,6 @@
+__pycache__
 drivers_licence.gz
 geckodriver
 geckodriver.log
 google
+.DS_Store
