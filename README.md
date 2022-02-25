@@ -26,8 +26,10 @@ BeautifulSoup: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 - Chrome Driver for Chrome 99 (aka Chrome Beta)
 
 Chrome Driver: https://chromedriver.chromium.org/downloads
+
 *ensure this installed on your path* 
-*if on a mac, use ''' brew install --cask chromedriver '''*
+
+*if on a mac, use <code> brew install --cask chromedriver </code>*
 
 Chrome Beta: https://www.google.com/intl/en_ca/chrome/beta/
 
@@ -126,6 +128,7 @@ If you find extraneous words, add them to the stoplist and they'll be excluded o
 You can apply similar analysis to titles (will need to iterate through them one by one if you want a word list), to links (filter domains using a regex), or to headings.
 
 Example domain-name regex = <code> r'(?<=//)(w{0,3})(.*?)(?=(\..{2,3}/)' </code>
+
 Note: this might not catch all domains depending on complexity. 
 
 
