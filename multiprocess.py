@@ -127,6 +127,23 @@ class Scraper():
             self.final_dict[f'url #{x}'] = self.get_soup(element, url)
             x+=1
 
+    def get_company_reddit(company, timeframe, limit, listing): 
+        try:
+            base_url = f'https://www.reddit.com/search.json?q={company}&limit={limit}&t={timeframe}&sort={listing}'
+            request = requests.get(base_url, headers = {'User-agent': 'SimpleScraper'})
+        except:
+            print('An Error Occured')
+        return request.json()
+
+    def reddit_function(self, urls):
+        pool = multiprocessing.Pool(processes=len(urls))
+        a = pool.imap_unordered(self.get_page,urls)
+        self.final_dict = {}
+        x = 1
+        for element, url in a:
+            self.final_dict[f'url #{x}'] = self.get_company_reddit(element, url)
+            x+=1
+
 
 #         urls = ['https://markets.businessinsider.com/commodities/lumber-price',
 #  'https://www.nasdaq.com/market-activity/commodities/lbs',

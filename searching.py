@@ -21,6 +21,7 @@ class Finder:
 
     def get_google_queries(self, topics, category, timeframe, geography, gprop, valuethreshhold):
         pytrends = TrendReq(hl='en_US', tz=360, backoff_factor=0.2)
+        #add in a try except clause here
         pytrends.build_payload(topics,cat=category,timeframe=timeframe,geo=geography,gprop=gprop)
         pytrends.interest_over_time()
         a = pytrends.related_queries()
