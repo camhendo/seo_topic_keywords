@@ -1,0 +1,8 @@
+2022-02-19T10:34:57,469 ERROR: You must give at least one requirement to uninstall (see "pip help uninstall")
+2022-02-19T10:34:57,470 Exception information:
+2022-02-19T10:34:57,470 Traceback (most recent call last):
+2022-02-19T10:34:57,470   File "/usr/local/lib/python3.9/site-packages/pip/_internal/cli/base_command.py", line 167, in exc_logging_wrapper
+2022-02-19T10:34:57,470     status = run_func(*args)
+2022-02-19T10:34:57,470   File "/usr/local/lib/python3.9/site-packages/pip/_internal/commands/uninstall.py", line 87, in run
+2022-02-19T10:34:57,470     raise InstallationError(
+2022-02-19T10:34:57,470 pip._internal.exceptions.InstallationError: You must give at least one requirement to uninstall (see "pip help uninstall")
